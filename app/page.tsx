@@ -50,24 +50,16 @@ export default function Home() {
       <MusicPlayer />
 
       {/* JOIN COMMUNITY */}
-      <section className="text-center py-24 border-t border-red-900">
-
-        <h2 className="text-3xl font-bold font-mono">
+      <section className="text-center py-20 px-6 border-t border-red-900">
+        <h2 className="text-2xl sm:text-3xl font-bold">
           GABUNG BERSAMA <span className="text-red-500">OGFT</span>
         </h2>
 
-        <p className="text-gray-400 mt-4">
+        <p className="text-gray-400 mt-4 max-w-md mx-auto text-sm sm:text-base">
           Jadi bagian dari keluarga Orang Gila Fals Tangerang.
-          <br />
-          Berbicara tentang kehidupan, berbicara tentang kebudayaan, Berbicara tentang ombak lautan, berbicara tentang bintang di langit.
-          <br />
-          Kami berbicara tentang Tuhan, berbicara tentang kesejatian. Tentang apa saja.
         </p>
 
-
-        <div className="mt-8 flex justify-center gap-4">
-
-
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="https://chat.whatsapp.com/DUSv1EPryUsDQ4agkWUOKJ"
             target="_blank"
