@@ -61,8 +61,8 @@ export default function MusicPlayer() {
     return (
         <section className="p-12">
 
-            <h2 className="text-3xl font-bold mb-10">
-                OGFT MUSIC PLAYER
+            <h2 className="text-3xl font-bold text-center mb-12 font-mono">
+                OGFT <span className="text-red-500">PLAYLIST</span>
             </h2>
 
             <div className="bg-[#0b0b0b] border border-red-900 rounded-xl overflow-hidden">

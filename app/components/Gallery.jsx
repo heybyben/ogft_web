@@ -39,8 +39,8 @@ export default function Gallery() {
     return (
         <section className="py-24 border-t border-red-900">
 
-            <h2 className="text-3xl font-bold text-center mb-12">
-                COMMUNITY <span className="text-red-500">MOMENTS</span>
+            <h2 className="text-3xl font-bold text-center mb-12 font-mono">
+                PERJALANAN <span className="text-red-500">WAKTU</span>
             </h2>
 
             <div

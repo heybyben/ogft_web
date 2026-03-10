@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import GridBackground from "./components/GridBackground";
 
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+
 export const metadata = {
   title: "OGFT Tangerang",
   description: "Orang Gila Fals Tangerang Community",
@@ -14,8 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="bg-black text-white min-h-screen">
+    <html
+      lang="en"
+      className={`dark ${GeistSans.variable} ${GeistMono.variable}`}
+    >
+      <body className="bg-black text-white min-h-screen font-sans antialiased">
 
         <Navbar />
 

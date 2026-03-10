@@ -14,11 +14,11 @@ export default function Home() {
             ORANG GILA FALS TANGERANG
           </span>
 
-          <h1 className="text-6xl font-bold leading-tight">
-            HIDUP BERSAMA,
+          <h1 className="text-6xl font-bold leading-tight font-mono">
+            Hidup Bersama,
             <br />
             <span className="text-red-500">
-              HARUS DIJAGA.
+              Harus Dijaga.
             </span>
           </h1>
 
@@ -52,7 +52,7 @@ export default function Home() {
       {/* JOIN COMMUNITY */}
       <section className="text-center py-24 border-t border-red-900">
 
-        <h2 className="text-3xl font-bold">
+        <h2 className="text-3xl font-bold font-mono">
           GABUNG BERSAMA <span className="text-red-500">OGFT</span>
         </h2>
 
