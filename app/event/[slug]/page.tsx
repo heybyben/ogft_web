@@ -8,6 +8,8 @@ import html from "remark-html";
 import gfm from "remark-gfm";
 import { notFound } from "next/navigation";
 
+export const runtime = 'edge';
+
 interface Event {
     title: string;
     date: string;
