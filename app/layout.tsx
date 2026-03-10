@@ -7,8 +7,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
 export const metadata = {
-  title: "OGFT Tangerang",
-  description: "Orang Gila Fals Tangerang Community",
+  title: "OGFT | Fals Mania Tangerang",
+  description: "Kumis dan Jenggotnya Jarang-jarang.",
 };
 
 export default function RootLayout({
