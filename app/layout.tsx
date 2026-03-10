@@ -9,6 +9,9 @@ import { GeistMono } from "geist/font/mono";
 export const metadata = {
   title: "OGFT | Fals Mania Tangerang",
   description: "Kumis dan Jenggotnya Jarang-jarang.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
