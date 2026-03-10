@@ -1,7 +1,45 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Gallery from "./components/Gallery";
 import MusicPlayer from "./components/MusicPlayer";
 
 export default function Home() {
+
+  const words = ["Asah", "Asih", "Asuh"];
+
+  const [wordIndex, setWordIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+
+    const current = words[wordIndex];
+
+    const timeout = setTimeout(() => {
+
+      if (!deleting) {
+        setText(current.substring(0, text.length + 1));
+
+        if (text === current) {
+          setTimeout(() => setDeleting(true), 1000);
+        }
+
+      } else {
+        setText(current.substring(0, text.length - 1));
+
+        if (text === "") {
+          setDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+
+    }, deleting ? 60 : 120);
+
+    return () => clearTimeout(timeout);
+
+  }, [text, deleting, wordIndex]);
+
   return (
     <main>
 
@@ -22,16 +60,17 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="mt-6 text-gray-400">
-            Disini kami tetap berdiri, Disini kami tetap berpikir
-            Disini kami tetap berjaga, Disini kami tetap waspada
-            Disini kami membuka mata, Disini kami selalu mencari
-            Kesejatian diri.
+          <p className="mt-3 text-lg text-gray-300 font-mono">
+            Saling <span className="text-red-500">{text}</span>
+            <span className="animate-pulse">|</span>
           </p>
 
-          <button className="mt-6 bg-red-600 px-6 py-3 rounded">
-            Explore the Archive →
-          </button>
+          <p className="mt-6 text-gray-400">
+            Disini kami tetap berdiri, disini kami tetap berpikir,
+            disini kami tetap berjaga, disini kami tetap waspada,
+            disini kami membuka mata, disini kami selalu mencari
+            Kesejatian diri.
+          </p>
 
         </div>
 
@@ -40,7 +79,6 @@ export default function Home() {
             src="/ogft-logo.png"
             className="w-80 mx-auto animate-float drop-shadow-[0_0_25px_rgba(239,68,68,0.4)]"
           />
-
         </div>
 
       </section>
@@ -75,7 +113,6 @@ export default function Home() {
           >
             Follow Instagram
           </a>
-
         </div>
 
       </section>
