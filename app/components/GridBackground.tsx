@@ -26,7 +26,7 @@ export default function GridBackground() {
               d="M.5 40V.5H40"
               fill="none"
               stroke="currentColor"
-              className="text-neutral-400/5 dark:text-neutral-700/10"
+              className="text-neutral-400/15 dark:text-neutral-700/20"
             />
           </pattern>
 
