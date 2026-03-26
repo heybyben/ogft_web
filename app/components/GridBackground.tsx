@@ -12,7 +12,7 @@ export default function GridBackground() {
       onMouseMove={(e) =>
         setPos({ x: e.clientX, y: e.clientY })
       }
-      className="absolute inset-0 -z-10 overflow-hidden"
+      className="absolute inset-0 -z-10 overflow-hidden bg-black"
     >
       <svg className="absolute inset-0 w-full h-full">
         <defs>
