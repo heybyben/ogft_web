@@ -83,6 +83,25 @@ export default function Home() {
 
       </section>
 
+      {/* RUNNING TEXT */}
+      <div className="relative overflow-hidden border-y border-red-900 py-3 bg-black">
+        {/* fade kiri */}
+        <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-black to-transparent z-10" />
+        {/* fade kanan */}
+        <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-black to-transparent z-10" />
+
+        <div className="flex animate-marquee whitespace-nowrap">
+          <span className="mx-6 text-red-400 font-mono text-sm">
+            OGFT • Orang Gila Fals Tangerang • Hidup Bersama Harus Dijaga • Pinggiran Kota Besar • Fals Mania • Saling Asah • Saling Asih • Saling Asuh •
+          </span>
+
+          {/* DUPLIKAT WAJIB */}
+          <span className="mx-6 text-red-400 font-mono text-sm">
+            OGFT • Orang Gila Fals Tangerang • Hidup Bersama Harus Dijaga • Pinggiran Kota Besar • Fals Mania • Saling Asah • Saling Asih • Saling Asuh •
+          </span>
+        </div>
+      </div>
+
       <Gallery />
 
       <MusicPlayer />

@@ -24,9 +24,11 @@ body {
   from {
     transform: translateY(0) scale(1);
   }
+
   50% {
     transform: translateY(-10px) scale(1.02);
   }
+
   to {
     transform: translateY(0) scale(1);
   }
@@ -36,17 +38,26 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
-@keyframes slide {
-  from {
+@keyframes marquee {
+  0% {
     transform: translateX(0);
   }
-  to {
+
+  100% {
     transform: translateX(-50%);
   }
 }
 
-.animate-slide {
-  animation: slide 25s linear infinite;
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 15s linear infinite;
+  gap: 2rem;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 .no-scrollbar::-webkit-scrollbar {
