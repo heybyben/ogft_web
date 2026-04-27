@@ -6,6 +6,8 @@ import GridBackground from "./components/GridBackground";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
+import SmoothScroll from "./components/SmoothScroll";
+
 export const metadata = {
   title: "OGFT | Fals Mania Tangerang",
   description: "Kumis dan Jenggotnya Jarang-jarang.",
@@ -25,16 +27,16 @@ export default function RootLayout({
       className={`dark ${GeistSans.variable} ${GeistMono.variable}`}
     >
       <body className="bg-black text-white min-h-screen font-sans antialiased">
+        <SmoothScroll>
+          <Navbar />
 
-        <Navbar />
+          <main className="relative isolate">
+            <GridBackground />
+            {children}
+          </main>
 
-        <main className="relative isolate">
-          <GridBackground />
-          {children}
-        </main>
-
-        <Footer />
-
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
